@@ -11,9 +11,10 @@ class Content extends React.Component {
         <div className="line"></div>
 
         {/* Timeline item */}
-        {activities.map((activity) => (
+        {/* Each child in an array or iterator should have a unique "key" prop. */}
+        {activities.map((activity, id) => (
           <ActivityItem
-            activity={activity} />
+            activity={activity} key={id} />
         ))}
         
       </div>
